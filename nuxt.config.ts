@@ -7,26 +7,30 @@ export default defineNuxtConfig({
 			},
 		},
 	},
-	css: ['~/assets/scss/main.scss'],
-    postcss: {
+	css: ["~/assets/scss/main.scss"],
+	postcss: {
 		plugins: {
 			tailwindcss: {},
-			autoprefixer: {}
-		}
+			autoprefixer: {},
+		},
 	},
-	modules: [
-		[
-			"@pinia/nuxt",
-			{
-				autoImports: [
-					// automatically imports `defineStore`
-					"defineStore", // import { defineStore } from 'pinia'
-					// automatically imports `defineStore` as `definePiniaStore`
-					["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
-				],
-			},
+	modules: ["@pinia/nuxt", "@nuxtjs/apollo"],
+	pinia: {
+		autoImports: [
+			// automatically imports `defineStore`
+			"defineStore", // import { defineStore } from 'pinia'
+			// automatically imports `defineStore` as `definePiniaStore`
+			["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
 		],
-	],
+	},
+	apollo: {
+		autoImports: true,
+		clients: {
+			default: {
+				httpEndpoint: "https://graphql.anilist.co",
+			},
+		},
+	},
 	runtimeConfig: {
 		public: {},
 	},
