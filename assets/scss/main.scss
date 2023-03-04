@@ -3,4 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+    .container {
+        @apply max-w-7xl px-4 self-center mx-auto;
+    }
+}
+
+body {
+    @apply bg-gray-800;
 }
