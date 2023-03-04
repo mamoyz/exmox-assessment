@@ -7,6 +7,13 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+	css: ['~/assets/scss/main.scss'],
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {}
+		}
+	},
 	modules: [
 		[
 			"@pinia/nuxt",
