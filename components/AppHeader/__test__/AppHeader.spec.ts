@@ -13,11 +13,12 @@ describe("Testing Header Component", () => {
 
 	it("renders the search bar", () => {
 		expect(wrapper.find("#search-bar").exists()).toBeTruthy();
+		expect(wrapper.find("#search-bar input").exists()).toBeTruthy();
 	});
 
 	it("renders favorites button", () => {
 		expect(wrapper.find("#favorites-button").exists()).toBeTruthy();
 	});
 
-    
+
 });
