@@ -8,7 +8,6 @@
 <script>
 	import HomeHero from "@/components/HomeHero";
 	import HomeAnimes from "@/components/HomeAnimes";
-
 	export default {
 		components: {
 			HomeHero,
