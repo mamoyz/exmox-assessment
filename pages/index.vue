@@ -1,5 +1,4 @@
 <template>
-	<div class="text-4xl">ss</div>
 </template>
 
 <script lang="ts">
