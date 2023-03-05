@@ -13,6 +13,12 @@
 			featuredAnime: {
 				type: Object,
 				required: true,
+				default: {
+					title: "Test Title",
+					description: "Test Description",
+					bannerImage: "https://s4.anilist.co/file/anilistcdn/media/anime/banner/114129-ZsLDkdwaYeJY.jpg",
+					id: "12345",
+				},
 			},
 		},
 		setup(props) {
