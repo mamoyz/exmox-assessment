@@ -12,6 +12,7 @@ describe("Testing AnimeSlider Component", () => {
 			},
 		});
 	});
+
 	it("renders the component", () => {
 		expect(wrapper.exists()).toBeTruthy();
 	});
@@ -23,7 +24,7 @@ describe("Testing AnimeSlider Component", () => {
 		expect(wrapper.find(".title").exists()).toBeTruthy();
 		expect(wrapper.find(".title").text()).toBe("Test");
 	});
-	it("renders anime list item", () => {
+	it("renders AnimeListItem component", () => {
 		expect(wrapper.findComponent({ name: "AnimeListItem" }).exists()).toBeTruthy();
 		expect(wrapper.findAllComponents({ name: "AnimeListItem" }).length).toBe(5);
 	});
