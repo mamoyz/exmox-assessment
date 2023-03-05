@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
-	modules: ["@pinia/nuxt", "@nuxtjs/apollo"],
+	modules: ["@pinia/nuxt", "@nuxtjs/apollo", "@nuxt/image-edge"],
 	pinia: {
 		autoImports: [
 			// automatically imports `defineStore`
@@ -30,6 +30,17 @@ export default defineNuxtConfig({
 			default: {
 				httpEndpoint: "https://graphql.anilist.co",
 			},
+		},
+	},
+	image: {
+		screens: {
+			xs: 320,
+			sm: 640,
+			md: 768,
+			lg: 1024,
+			xl: 1280,
+			xxl: 1536,
+			"2xl": 1536,
 		},
 	},
 	runtimeConfig: {

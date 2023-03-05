@@ -10,6 +10,7 @@
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27954023.4cee565",
     "@nuxtjs/apollo": "^5.0.0-alpha.5",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/test-utils": "^2.3.0",
