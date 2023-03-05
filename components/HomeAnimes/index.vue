@@ -1,9 +1,14 @@
 <template>
-	<div>home animes</div>
+	<AnimeSlider />
+	<AnimeSlider />
 </template>
 
 <script>
+	import AnimeSlider from "~/components/AnimeSlider/index.vue";
 	export default {
+		components: {
+			AnimeSlider,
+		},
 		setup() {
 			return {};
 		},

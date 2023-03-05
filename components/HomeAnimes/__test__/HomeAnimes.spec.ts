@@ -14,6 +14,6 @@ describe("Testing HomeAnimes Component", () => {
 
 	it("renders AnimeSlider component", () => {
 		expect(wrapper.findComponent({ name: "AnimeSlider" }).exists()).toBeTruthy();
-		expect(wrapper.findComponent({ name: "AnimeSlider" }).length).toBe(2);
+		expect(wrapper.findAllComponents({ name: "AnimeSlider" }).length).toBe(2);
 	});
 });
