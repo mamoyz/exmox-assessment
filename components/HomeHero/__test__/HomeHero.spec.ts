@@ -10,7 +10,7 @@ describe("Testing HomeHero Component", () => {
 					title: "Test Title",
 					description: "Test Description",
 					bannerImage: "https://via.placeholder.com/150",
-					id: 12345,
+					id: "12345",
 				},
 			},
 		});
@@ -29,6 +29,6 @@ describe("Testing HomeHero Component", () => {
 	});
 	it("renders the hero button", () => {
 		expect(wrapper.find("#hero-button").exists()).toBeTruthy();
-		expect(wrapper.find("#hero-button").attributes("href")).toContain("12345");
+		expect(wrapper.find("#hero-button").attributes("to")).toContain("12345");
 	});
 });
