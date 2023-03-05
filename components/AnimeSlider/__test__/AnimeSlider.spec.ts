@@ -28,4 +28,5 @@ describe("Testing AnimeSlider Component", () => {
 		expect(wrapper.findComponent({ name: "AnimeListItem" }).exists()).toBeTruthy();
 		expect(wrapper.findAllComponents({ name: "AnimeListItem" }).length).toBe(5);
 	});
+    
 });
