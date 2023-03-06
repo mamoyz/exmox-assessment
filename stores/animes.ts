@@ -54,7 +54,7 @@ export const useAnimeStore = defineStore(
 					search,
 				})) as Response;
 				if (error.value) throw new Error(error.value as any);
-				return { data };
+				return data?.value?.Page?.media
 			} catch (error) {
 				console.log(error);
 			}

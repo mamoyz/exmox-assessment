@@ -8,7 +8,7 @@ describe("Testing HomeHero Component", () => {
 			props: {
 				featuredAnime: {
 					title: {
-						english: "Test Title",
+						userPreferred: "Test Title",
 					},
 					description: "Test Description",
 					bannerImage: "https://via.placeholder.com/150",

@@ -1,7 +1,7 @@
 export const mediaObject = `
     id
     title {
-      english
+      userPreferred
     }
     coverImage {
       large

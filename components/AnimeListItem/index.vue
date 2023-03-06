@@ -10,7 +10,7 @@
 		<p class="flex text-base text-gray-300 mt-1">
 			Average Score
 			<span class="score bg-indigo-600 rounded-full px-5 py-1 text-sm ml-2 font-bold">
-				{{ averageScore }}
+				{{ averageScore || "N/A" }}
 			</span>
 		</p>
 		<p class="text-base text-gray-300 mt-1">
@@ -46,7 +46,7 @@
 			const { anime } = props;
 			const id = anime.id;
 			const image = anime.coverImage.large;
-			const title = anime.title.english;
+			const title = anime.title.userPreferred;
 			const description = anime.description;
 			const averageScore = anime.averageScore;
 			const genres = anime.genres.join(", ");

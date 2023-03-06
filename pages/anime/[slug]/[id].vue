@@ -7,7 +7,7 @@
 				</div>
 				<div class="w-7/12">
 					<div class="flex justify-between items-start">
-						<h1 class="title font-bold text-white text-4xl flex">{{ animeInfo?.title?.english }}</h1>
+						<h1 class="title font-bold text-white text-4xl flex">{{ animeInfo?.title?.userPreferred }}</h1>
 						<span class="flex items-center score text-white bg-green-600 text-2xl p-2 px-6 ml-4 rounded-full">
 							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="20" height="19.96144433354753" x="0" y="0" viewBox="0 0 511.987 511" style="enable-background: new 0 0 512 512" xml:space="preserve">
 								<g>
