@@ -1,5 +1,5 @@
 <template>
-	<header class="py-10 fixed bg-transparent text-white top-0 w-full left-0 right-0 border-b-2 border-gray-700">
+	<header class="z-50 pt-8 pb-16 fixed bg-transparent text-white top-0 w-full left-0 right-0">
 		<div class="container">
 			<div class="flex flex-row justify-between items-center">
 				<div>
@@ -26,4 +26,9 @@
 	};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	header {
+		background: rgb(0, 0, 0);
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%);
+	}
+</style>

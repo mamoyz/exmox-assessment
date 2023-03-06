@@ -1,8 +1,6 @@
 <template>
-	<div>
-		<HomeHero :featuredAnime="featuredAnime" />
-		<HomeAnimes :animes="animes" />
-	</div>
+	<HomeHero :featuredAnime="featuredAnime" />
+	<HomeAnimes :animes="animes" />
 </template>
 
 <script>
