@@ -1,0 +1,286 @@
+[
+    {
+        "id": 137822,
+        "title": {
+            "userPreferred": "Blue Lock"
+        },
+        "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137822-4dVWMSHLpGf8.png",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137822-4dVWMSHLpGf8.png",
+            "color": "#286be4"
+        },
+        "startDate": {
+            "year": 2022,
+            "month": 10,
+            "day": 9
+        },
+        "endDate": {
+            "year": null,
+            "month": null,
+            "day": null
+        },
+        "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/137822-oevspckMGLuY.jpg",
+        "season": "FALL",
+        "seasonYear": 2022,
+        "description": "After a disastrous defeat at the 2018 World Cup, Japan's team struggles to regroup. But what's missing? An absolute Ace Striker, who can guide them to the win. The Japan Football Union is hell-bent on creating a striker who hungers for goals and thirsts for victory, and who can be the decisive instrument in turning around a losing match...and to do so, they've gathered 300 of Japan's best and brightest youth players. Who will emerge to lead the team...and will they be able to out-muscle and out-ego everyone who stands in their way? <br>\n<br>\n(Source: Kodansha USA)<br>\n<br>\n<i>Note: The first episode received a pre-screening at the AnimagiC convention on August 6, 2022.</i>",
+        "type": "ANIME",
+        "format": "TV",
+        "status": "RELEASING",
+        "episodes": 24,
+        "duration": 25,
+        "chapters": null,
+        "volumes": null,
+        "genres": [
+            "Action",
+            "Drama",
+            "Sports"
+        ],
+        "isAdult": false,
+        "averageScore": 81,
+        "popularity": 128325,
+        "mediaListEntry": null,
+        "nextAiringEpisode": {
+            "airingAt": 1678552200,
+            "timeUntilAiring": 542319,
+            "episode": 22
+        },
+        "studios": {
+            "edges": [
+                {
+                    "isMain": true,
+                    "node": {
+                        "id": 4418,
+                        "name": "8-bit"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": 139630,
+        "title": {
+            "userPreferred": "Boku no Hero Academia 6"
+        },
+        "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139630-oc4l8OtJ4tRQ.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx139630-oc4l8OtJ4tRQ.jpg",
+            "color": "#e4935d"
+        },
+        "startDate": {
+            "year": 2022,
+            "month": 10,
+            "day": 1
+        },
+        "endDate": {
+            "year": null,
+            "month": null,
+            "day": null
+        },
+        "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/139630-XLc90c6CJjZv.jpg",
+        "season": "FALL",
+        "seasonYear": 2022,
+        "description": "With Tomura Shigaraki at its helm, the former Liberation Army is now known as the Paranormal Liberation Front. This organized criminal group poses an immense threat to the Hero Association, not only because of its sheer size and strength, but also the overpowering quirks of Jin \"Twice\" Bubaigawara and Gigantomachia.\n<br><br>\nAs new intel from the covert hero Keigo \"Hawks\" Takami confirms that Shigaraki is nowhere to be seen, the Hero Association decides to strike the enemy headquarters with a surprise attack using the entirety of its assets—and the UA students find themselves on the battlefield once again. As the fight rages on, the unsuspecting villains must regroup and push back, but the brave heroes are determined to eradicate every last one of them.\n<br><br>\n(Source: MAL Rewrite)",
+        "type": "ANIME",
+        "format": "TV",
+        "status": "RELEASING",
+        "episodes": 25,
+        "duration": 24,
+        "chapters": null,
+        "volumes": null,
+        "genres": [
+            "Action",
+            "Adventure",
+            "Comedy"
+        ],
+        "isAdult": false,
+        "averageScore": 82,
+        "popularity": 113337,
+        "mediaListEntry": null,
+        "nextAiringEpisode": {
+            "airingAt": 1678523400,
+            "timeUntilAiring": 513519,
+            "episode": 23
+        },
+        "studios": {
+            "edges": [
+                {
+                    "isMain": true,
+                    "node": {
+                        "id": 4,
+                        "name": "bones"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": 146984,
+        "title": {
+            "userPreferred": "Shingeki no Kyojin: The Final Season - Kanketsu-hen Zenpen"
+        },
+        "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx146984-EnCsTCpLyIBi.jpg",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146984-EnCsTCpLyIBi.jpg",
+            "color": "#ffae35"
+        },
+        "startDate": {
+            "year": 2023,
+            "month": 3,
+            "day": 4
+        },
+        "endDate": {
+            "year": 2023,
+            "month": 3,
+            "day": 4
+        },
+        "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/146984-yAkTtW2AExVj.jpg",
+        "season": "WINTER",
+        "seasonYear": 2023,
+        "description": "The fate of the world hangs in the balance as Eren unleashes the ultimate power of the Titans. With a burning determination to eliminate all who threaten Eldia, he leads an unstoppable army of Colossal Titans towards Marley. Now a motley crew of his former comrades and enemies scramble to halt his deadly mission, the only question is, can they stop him?<br>\n<br>\n(Source: Crunchyroll)",
+        "type": "ANIME",
+        "format": "SPECIAL",
+        "status": "FINISHED",
+        "episodes": 1,
+        "duration": 61,
+        "chapters": null,
+        "volumes": null,
+        "genres": [
+            "Action",
+            "Drama",
+            "Fantasy",
+            "Mystery",
+            "Psychological"
+        ],
+        "isAdult": false,
+        "averageScore": 89,
+        "popularity": 72615,
+        "mediaListEntry": null,
+        "nextAiringEpisode": null,
+        "studios": {
+            "edges": [
+                {
+                    "isMain": true,
+                    "node": {
+                        "id": 569,
+                        "name": "MAPPA"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": 143338,
+        "title": {
+            "userPreferred": "Otonari no Tenshi-sama ni Itsunomanika Dame Ningen ni Sareteita Ken"
+        },
+        "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx143338-zhyDVYgEzsm5.png",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx143338-zhyDVYgEzsm5.png",
+            "color": "#c9f1f1"
+        },
+        "startDate": {
+            "year": 2023,
+            "month": 1,
+            "day": 7
+        },
+        "endDate": {
+            "year": 2023,
+            "month": 3,
+            "day": 25
+        },
+        "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/143338-d0AqJzRUQCgk.jpg",
+        "season": "WINTER",
+        "seasonYear": 2023,
+        "description": "Amane lives alone in an apartment, and the most beautiful girl in school, Mahiru, lives just next door. They've almost never spoken-until the day he sees her in distress on a rainy day and lends her his umbrella. To return the favor, she offers him help around the house, and a relationship slowly begins to blossom as the distance between them closes...<br>\n<br>\n(Source: Yen Press)",
+        "type": "ANIME",
+        "format": "TV",
+        "status": "RELEASING",
+        "episodes": 12,
+        "duration": 24,
+        "chapters": null,
+        "volumes": null,
+        "genres": [
+            "Comedy",
+            "Romance",
+            "Slice of Life"
+        ],
+        "isAdult": false,
+        "averageScore": 77,
+        "popularity": 45172,
+        "mediaListEntry": null,
+        "nextAiringEpisode": {
+            "airingAt": 1678541400,
+            "timeUntilAiring": 531519,
+            "episode": 10
+        },
+        "studios": {
+            "edges": [
+                {
+                    "isMain": true,
+                    "node": {
+                        "id": 4399,
+                        "name": "project No.9"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": 142853,
+        "title": {
+            "userPreferred": "Tokyo Revengers: Seiya Kessen-hen"
+        },
+        "coverImage": {
+            "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx142853-nxEZDE9oDRLG.png",
+            "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx142853-nxEZDE9oDRLG.png",
+            "color": "#d6431a"
+        },
+        "startDate": {
+            "year": 2023,
+            "month": 1,
+            "day": 8
+        },
+        "endDate": {
+            "year": 2023,
+            "month": 4,
+            "day": 2
+        },
+        "bannerImage": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/142853-65n3FTeSiyA6.jpg",
+        "season": "WINTER",
+        "seasonYear": 2023,
+        "description": "Despite his best time-leaping efforts, Takemichi Hanagaki continuously fails to prevent the present-day death of Hinata Tachibana, his adolescent love. The adult Takemichi grapples with grief and the ramifications of the Tokyo Manji gang's criminal empire—an unintended product of his timeline meddling. Though the gang once operated under the idealistic Manjirou \"Mikey\" Sano, it has now been taken over by the malicious Tetta Kisaki and, as a result, has abandoned its original optimistic intent.\n<br><br>\nDespite feeling hopeless, Takemichi travels to the past once again to investigate Black Dragon, a rival motorcycle gang whose actions ultimately lead to Hinata's demise. There, he meets the young Hakkai Shiba, a fellow gang member whose older brother, Taiju, tyrannically rules Black Dragon.\n<br><br>\nTakemichi, with Chifuyu on his side, works to unravel the fates of Black Dragon's members, fighting to create a happy future for his loved ones.\n<br><br>\n(Source: MAL Rewrite, edited)",
+        "type": "ANIME",
+        "format": "TV",
+        "status": "RELEASING",
+        "episodes": 13,
+        "duration": 24,
+        "chapters": null,
+        "volumes": null,
+        "genres": [
+            "Action",
+            "Drama",
+            "Romance",
+            "Supernatural"
+        ],
+        "isAdult": false,
+        "averageScore": 76,
+        "popularity": 63484,
+        "mediaListEntry": null,
+        "nextAiringEpisode": {
+            "airingAt": 1678554480,
+            "timeUntilAiring": 544599,
+            "episode": 10
+        },
+        "studios": {
+            "edges": [
+                {
+                    "isMain": true,
+                    "node": {
+                        "id": 839,
+                        "name": "LIDENFILMS"
+                    }
+                }
+            ]
+        }
+    }
+]

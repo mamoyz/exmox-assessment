@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Exmox Test Assessment
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -16,6 +16,13 @@ npm install
 # pnpm
 pnpm install
 ```
+
+## Testing
+
+```bash
+npm run dev
+```
+
 
 ## Development Server
 

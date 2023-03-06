@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .container {
+        @apply max-w-7xl px-4 self-center mx-auto;
+    }
+    .button {
+        @apply rounded-full  text-white bg-indigo-700 py-5 px-10 lg:py-6  hover:bg-indigo-900 transition-all inline-block text-sm lg:text-lg text-center leading-none uppercase tracking-wider;
+        @screen lg {
+            min-width: 200px;
+        }
+    }
+}
+
+body {
+    @apply bg-gray-800;
+    font-family: "Lato";
+}
