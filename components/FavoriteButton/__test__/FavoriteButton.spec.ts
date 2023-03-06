@@ -6,11 +6,13 @@ describe("Testing FavoriteButton Component", () => {
 	const activeWrapper = shallowMount(FavoriteButton, {
 		props: {
 			active: true,
+			id: "1",
 		},
 	});
 	const dectiveWrapper = shallowMount(FavoriteButton, {
 		props: {
 			active: false,
+			id: "1",
 		},
 	});
 
@@ -25,19 +27,17 @@ describe("Testing FavoriteButton Component", () => {
 		expect(dectiveWrapper.find(".favorite-button").classes()).not.toContain("active");
 	});
 
-	it("adds anime to watchlist", () => {
+	it("adds anime to watchlist", async () => {
 		vi.spyOn(dectiveWrapper.vm, "handleClick");
-		dectiveWrapper.find(".favorite-button").trigger("click");
+		await dectiveWrapper.find(".favorite-button").trigger("click");
 		expect(dectiveWrapper.vm.handleClick).toBeCalled();
-		expect(deactiveWrapper.classes()).toContain("active");
+		expect(dectiveWrapper.classes()).toContain("active");
 	});
 
-	it("remove anime from watchlist", () => {
+	it("remove anime from watchlist", async () => {
 		vi.spyOn(activeWrapper.vm, "handleClick");
-		activeWrapper.find(".favorite-button").trigger("click");
+		await activeWrapper.find(".favorite-button").trigger("click");
 		expect(activeWrapper.vm.handleClick).toBeCalled();
 		expect(activeWrapper.classes()).not.toContain("active");
 	});
-
-	
 });
