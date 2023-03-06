@@ -39,7 +39,7 @@ export const useAnimeStore = defineStore("useAnimeStore", () => {
 		try {
 			const { data, error } = (await useAsyncQuery(animeByID, { id: animeId })) as Response;
 			if (error.value) throw new Error(error.value as any);
-			return data;
+			return data.value;
 		} catch (error) {
 			console.log(error);
 		}

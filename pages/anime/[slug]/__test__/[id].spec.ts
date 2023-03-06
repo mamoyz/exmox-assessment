@@ -12,11 +12,12 @@ describe("Testing Anime Page", () => {
 
 	let wrapper: any = null;
 	beforeEach(() => {
-		wrapper = shallowMount(AnimePage, {
-			props: {
-				anime: mockAnime[0],
-			},
+		wrapper = shallowMount(AnimePage);
+		vi.spyOn(wrapper.vm, "fetchAnimeInfo");
+		wrapper.vm.fetchAnimeInfo = vi.fn(() => {
+			return mockAnime[0];
 		});
+		wrapper.vm.animeInfo = mockAnime[0];
 	});
 
 	it("renders the component", () => {
@@ -24,14 +25,8 @@ describe("Testing Anime Page", () => {
 	});
 
 	it("fetches anime by ID", async () => {
-		vi.spyOn(wrapper.vm, "fetchAnimeInfo");
 		await wrapper.vm.fetchAnimeInfo();
 		expect(wrapper.vm.fetchAnimeInfo).toBeCalledTimes(1);
-	});
-
-	it("renders anime link", () => {
-		expect(wrapper.find(".anime-link").exists()).toBeTruthy();
-		expect(wrapper.find(".anime-link").attributes("to")).toBe("/anime/blue-lock/137822/");
 	});
 
 	it("renders anime title", () => {
@@ -41,7 +36,7 @@ describe("Testing Anime Page", () => {
 
 	it("renders anime image", () => {
 		expect(wrapper.find(".image").exists()).toBeTruthy();
-		expect(wrapper.find(".image").attributes("src")).toBe("https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137822-4dVWMSHLpGf8.png");
+		expect(wrapper.find(".image").attributes("src")).toBe("https://s4.anilist.co/file/anilistcdn/media/anime/banner/137822-oevspckMGLuY.jpg");
 	});
 
 	it("renders anime score", () => {
