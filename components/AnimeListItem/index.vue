@@ -22,7 +22,7 @@
 		<p class="text-base text-gray-300 mt-1 status">
 			{{ nextAiring }}
 		</p>
-		<FavoriteButton class="mt-3" :active="inWatchList" :id="id" />
+		<FavoriteButton class="mt-3" :active="inWatchList" :anime="anime" />
 	</div>
 </template>
 
@@ -56,7 +56,7 @@
 			const animeSlug = ref(slug(title, anime.id));
 			const { state } = useAnimeStore();
 			const inWatchList = computed(() => {
-				return state.watchList.indexOf(id) > -1;
+				return state.watchList.find((anime) => anime.id === id);
 			});
 			return {
 				id,

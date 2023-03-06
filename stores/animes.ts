@@ -18,14 +18,14 @@ export const useAnimeStore = defineStore("useAnimeStore", () => {
 		watchList: [],
 	});
 
-	const addToWatchList = (animeId: number) => {
-		state.watchList.push(animeId);
+	const addToWatchList = (anime) => {
+		state.watchList.push(anime);
 	};
 
-	const removeFromWatchList = (animeId: number) => {
-		state.watchList = state.watchList.filter((item: number) => item !== animeId);
+	const removeFromWatchList = (anime) => {
+		state.watchList = state.watchList.filter((item) => item.id !== anime.id);
 	};
-	
+
 	const getHomeAnimes = async () => {
 		try {
 			const { data, error } = (await useAsyncQuery(homeAnimes)) as Response;

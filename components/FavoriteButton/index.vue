@@ -17,13 +17,13 @@
 				type: Boolean,
 				default: false,
 			},
-			id: Number,
+			anime: Object,
 		},
 		setup(props) {
-			const { active, id } = toRefs(props);
+			const { active, anime } = toRefs(props);
 			const { addToWatchList, removeFromWatchList } = useAnimeStore();
 			const handleClick = () => {
-				active.value ? removeFromWatchList(id.value) : addToWatchList(id.value);
+				active.value ? removeFromWatchList(anime.value) : addToWatchList(anime.value);
 			};
 			return {
 				active,

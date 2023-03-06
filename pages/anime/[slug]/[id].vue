@@ -24,7 +24,7 @@
 						</span>
 					</div>
 					<div class="mt-8">
-						<FavoriteButton :active="inWatchList" :id="animeInfo?.id" />
+						<FavoriteButton :active="inWatchList" :anime="animeInfo" />
 					</div>
 					<div class="genres text-gray-300 text-lg mt-6">
 						<span class="text-xs uppercase text-white bg-indigo-700 rounded-full mr-3 py-2 px-5" v-for="genre in animeInfo?.genres" :key="genre">
@@ -63,8 +63,9 @@
 				const data = await getAnimeByID(+route.params.id);
 				animeInfo.value = data.Media;
 			};
+
 			const inWatchList = computed(() => {
-				return state.watchList.indexOf(animeInfo?.value?.id) > -1;
+				return state.watchList.some((anime) => anime.id === animeInfo?.value?.id);
 			});
 			const airingAt = computed(() => {
 				return airing(animeInfo?.value);
