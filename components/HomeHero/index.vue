@@ -5,12 +5,22 @@
 			<span class="block text-white text-sm uppercase tracking-widest">Featured Anime</span>
 			<h1 class="text-white uppercase font-bold text-5xl mt-3" id="featured-anime-title">{{ title?.english }}</h1>
 			<div class="text-gray-300 text-lg lg:max-w-4xl mt-5 leading-relaxed desc" id="featured-anime-description" v-html="description" />
-			<nuxt-link class="button mt-8" id="hero-button" :to="`anime/${id}`">More Info</nuxt-link>
+			<nuxt-link
+				class="button mt-8"
+				id="hero-button"
+				target="_blank"
+				:to="{
+					path: slug,
+				}"
+			>
+				More Info
+			</nuxt-link>
 		</div>
 	</section>
 </template>
 
 <script lang="ts">
+	import kebabCase from "lodash/kebabCase";
 	export default {
 		name: "HomeHero",
 		props: {
@@ -20,19 +30,17 @@
 			},
 		},
 		setup(props) {
-			if (!props.featuredAnime) return;
 			const { bannerImage, title, description, id } = toRefs(props.featuredAnime);
-			return { bannerImage, title, description, id };
+			const slug = computed(() => `/anime/${kebabCase(title?.value?.english)}/${id?.value}/`);
+			return { bannerImage, title, description, id, slug };
 		},
 	};
 </script>
 
 <style lang="scss" scoped>
 	.desc {
-		::v-deep {
-			br {
-				display: none;
-			}
+		::v-deep(br) {
+			display: none;
 		}
 	}
 </style>

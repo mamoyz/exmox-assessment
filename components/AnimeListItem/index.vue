@@ -1,6 +1,8 @@
 <template>
-	<div>
-		<nuxt-img class="image" :src="image" />
+	<div class="text-white">
+		<div class="img">
+			<nuxt-img class="image rounded-2xl" :src="image" />
+		</div>
 		<h4 class="title">{{ title }}</h4>
 		<p class="description">{{ description }}</p>
 		<p class="score">{{ averageScore }}</p>
@@ -44,4 +46,16 @@
 	};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	.image {
+		width: 100%;
+		height: 400px;
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+</style>
