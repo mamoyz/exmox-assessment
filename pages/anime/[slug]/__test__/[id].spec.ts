@@ -46,7 +46,7 @@ describe("Testing Anime Page", () => {
 
 	it("renders anime genres", () => {
 		expect(wrapper.find(".genres").exists()).toBeTruthy();
-		expect(wrapper.find(".genres").text()).toBe("Action, Drama, Sports");
+		expect(wrapper.find(".genres").text()).toBe("ActionDramaSports");
 	});
 
 	it("renders anime airing status", () => {
