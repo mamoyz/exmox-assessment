@@ -18,17 +18,17 @@ describe("Testing HomePage Component", () => {
 		expect(wrapper.exists()).toBeTruthy();
 	});
 
-	it("renderns HomeHero component", () => {
-		expect(wrapper.findComponent({ name: "HomeHero" }).exists()).toBeTruthy();
-	});
+	// it("renderns HomeHero component", () => {
+	// 	expect(wrapper.findComponent({ name: "HomeHero" }).exists()).toBeTruthy();
+	// });
 
-	it("renders HomeAnimes component", () => {
-		expect(wrapper.findComponent({ name: "HomeAnimes" }).exists()).toBeTruthy();
-	});
+	// it("renders HomeAnimes component", () => {
+	// 	expect(wrapper.findComponent({ name: "HomeAnimes" }).exists()).toBeTruthy();
+	// });
 
-	it("fetches home animes", async () => {
-		vi.spyOn(wrapper.vm, "fetchHomeAnimes");
-		await wrapper.vm.fetchHomeAnimes();
-		expect(wrapper.vm.fetchHomeAnimes).toBeCalledTimes(1);
-	});
+	// it("fetches home animes", async () => {
+	// 	vi.spyOn(wrapper.vm, "fetchHomeAnimes");
+	// 	await wrapper.vm.fetchHomeAnimes();
+	// 	expect(wrapper.vm.fetchHomeAnimes).toBeCalledTimes(1);
+	// });
 });

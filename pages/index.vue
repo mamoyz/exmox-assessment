@@ -7,14 +7,13 @@
 	import HomeHero from "~/components/HomeHero/index.vue";
 	import HomeAnimes from "~/components/HomeAnimes/index.vue";
 	import { useAnimeStore } from "~/stores/animes";
-	import { useAsyncData } from "#imports";
 	export default {
 		name: "HomePage",
 		components: {
 			HomeHero,
 			HomeAnimes,
 		},
-		setup() {
+		async setup() {
 			const animeStore = useAnimeStore();
 			const animes = ref({});
 			const featuredAnime = ref({});
@@ -23,7 +22,7 @@
 				animes.value = data;
 				featuredAnime.value = data?.trending?.media[0];
 			};
-			useAsyncData(fetchHomeAnimes);
+			await fetchHomeAnimes()
 			return { animes, fetchHomeAnimes, featuredAnime };
 		},
 	};
