@@ -36,7 +36,7 @@ describe("Testing Anime Page", () => {
 
 	it("renders anime image", () => {
 		expect(wrapper.find(".image").exists()).toBeTruthy();
-		expect(wrapper.find(".image").attributes("src")).toBe("https://s4.anilist.co/file/anilistcdn/media/anime/banner/137822-oevspckMGLuY.jpg");
+		expect(wrapper.find(".image").attributes("src")).toBe("https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137822-4dVWMSHLpGf8.png");
 	});
 
 	it("renders anime score", () => {

@@ -1,7 +1,8 @@
 <template>
-	<section>
-		<div class="container">
-			<nuxt-img class="image object-cover w-fit object-center h-full opacity-40 absolute z-0" :src="animeInfo?.bannerImage || ' '" :width="1600" :height="600" />
+	<section class="relative">
+		<div class="container pt-48 pb-28">
+
+			<nuxt-img class="image object-cover w-fit object-center h-full opacity-40 absolute z-0" :src="animeInfo?.coverImage.large || ' '" :width="1600" :height="600" />
 			<h1 class="title">{{ animeInfo?.title?.english }}</h1>
 			<div class="genres">
 				{{ animeInfo?.genres?.join(", ") }}
