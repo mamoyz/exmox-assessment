@@ -68,14 +68,15 @@
 	.next,
 	.prev {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top:250px;
 		z-index: 50;
 	}
 	.next {
 		right: 0;
+		transform: translate(120%, -50%);
 	}
 	.prev {
 		left: 0;
+		transform: translate(-120%, -50%);
 	}
 </style>

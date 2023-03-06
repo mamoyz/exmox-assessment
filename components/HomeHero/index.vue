@@ -5,16 +5,7 @@
 			<span class="block text-white text-sm uppercase tracking-widest">Featured Anime</span>
 			<h1 class="text-white uppercase font-bold text-5xl mt-3" id="featured-anime-title">{{ title?.english }}</h1>
 			<div class="text-gray-300 text-lg lg:max-w-4xl mt-5 leading-relaxed desc" id="featured-anime-description" v-html="description" />
-			<nuxt-link
-				class="button mt-8"
-				id="hero-button"
-				target="_blank"
-				:to="{
-					path: animeSlug,
-				}"
-			>
-				More Info
-			</nuxt-link>
+			<nuxt-link class="button mt-8" id="hero-button" target="_blank" :to="animeSlug">More Info</nuxt-link>
 		</div>
 	</section>
 </template>

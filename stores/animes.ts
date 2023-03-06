@@ -15,13 +15,21 @@ export const useAnimeStore = defineStore("useAnimeStore", () => {
 		error: any;
 	};
 	const state = reactive({
-		test: "mamo",
+		watchList: [],
 	});
+
+	const addToWatchList = (animeId: string) => {
+		state.watchList.push(animeId);
+	};
+
+	const removeFromWatchList = (animeId: string) => {
+		state.watchList = state.watchList.filter((item: string) => item !== animeId);
+	};
 	const getHomeAnimes = async () => {
 		try {
 			const { data, error } = (await useAsyncQuery(homeAnimes)) as Response;
 			if (error.value) throw new Error(error.value as any);
-			return data.value
+			return data.value;
 		} catch (error) {
 			console.log(error);
 		}
@@ -48,5 +56,5 @@ export const useAnimeStore = defineStore("useAnimeStore", () => {
 			console.log(error);
 		}
 	};
-	return { state, getHomeAnimes, getAnimeByID, searchInAnimes };
+	return { state, getHomeAnimes, getAnimeByID, searchInAnimes, addToWatchList, removeFromWatchList };
 });
