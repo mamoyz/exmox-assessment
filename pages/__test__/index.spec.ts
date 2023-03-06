@@ -20,4 +20,10 @@ describe("Testing HomePage Component", () => {
 	it("renders HomeAnimes component", () => {
 		expect(wrapper.findComponent({ name: "HomeAnimes" }).exists()).toBeTruthy();
 	});
+
+	it("fetches home animes", async () => {
+		vi.spyOn(wrapper.vm, "fetchHomeAnimes");
+		await wrapper.vm.fetchHomeAnimes();
+		expect(wrapper.vm.fetchHomeAnimes).toBeCalledTimes(1);
+	});
 });
