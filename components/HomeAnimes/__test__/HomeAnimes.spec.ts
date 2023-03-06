@@ -26,6 +26,6 @@ describe("Testing HomeAnimes Component", () => {
 			},
 		});
 		expect(wrapperWithProps.vm.animes.trending.length).toBe(5);
-		expect(wrapperWithProps.vm.animes.trending.top).toBe(5);
+		expect(wrapperWithProps.vm.animes.top.length).toBe(5);
 	});
 });
