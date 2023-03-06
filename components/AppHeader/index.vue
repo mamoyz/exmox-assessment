@@ -3,13 +3,17 @@
 		<div class="container">
 			<div class="flex flex-row justify-between items-center">
 				<div>
-					<div id="app-logo">ExmoxAssessment</div>
+					<div id="app-logo" class="font-bold text-xl">
+						<nuxt-link to="/">
+							ExmoxAssessment
+						</nuxt-link>
+					</div>
 				</div>
 				<div class="flex items-center gap-10">
 					<div>
-						<form id="search-bar" class="flex">
-							<input @focus="focus = true" @blur="focus = false" placeholder="Search Animes" :class="{ 'pr-24': focus }" class="px-6 py-2 outline-none text-black rounded-full transition-all" type="text" name="" id="" />
-							<button type="submit" class="p-4">
+						<form @submit.prevent="handleSearch(searchQuery)" id="search-bar" class="flex" novalidate>
+							<input v-model="searchQuery" @focus="focus = true" @blur="focus = false" placeholder="Search Animes" :class="{ 'pr-24': focus }" class="px-6 py-2 outline-none text-black rounded-full transition-all" type="text" name="" id="" />
+							<button id="submit-search" type="submit" class="p-4">
 								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24" x="0" y="0" viewBox="0 0 56.966 56.966" style="enable-background: new 0 0 512 512" xml:space="preserve">
 									<g><path d="M55.146 51.887 41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z" fill="#ffffff" data-original="#ffffff"></path></g>
 								</svg>
@@ -30,14 +34,28 @@
 
 <script>
 	import { useAnimeStore } from "~/stores/animes";
+
 	export default {
 		setup() {
+			const router = useRouter();
 			const focus = ref(false);
+			const searchQuery = ref("");
 			const { state } = useAnimeStore();
 			const { watchList } = toRefs(state);
+			const handleSearch = (keyword) => {
+				if (!keyword || keyword.length < 3) return;
+				router.push({
+					path: "/search/",
+					query: {
+						keyword,
+					},
+				});
+			};
 			return {
 				focus,
 				watchList,
+				handleSearch,
+				searchQuery,
 			};
 		},
 	};

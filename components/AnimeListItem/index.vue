@@ -9,7 +9,7 @@
 		<h4 class="title font-semibold text-lg mt-5">{{ title }}</h4>
 		<p class="flex  text-base text-gray-300 mt-1">
 			Average Score
-			<span class="score bg-indigo-600 rounded-full px-6 py-1 text-sm ml-2 font-bold">
+			<span class="score bg-indigo-600 rounded-full px-5 py-1 text-sm ml-2 font-bold">
 				{{ averageScore }}
 			</span>
 		</p>

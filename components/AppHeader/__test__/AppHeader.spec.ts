@@ -28,7 +28,7 @@ describe("Testing Header Component", () => {
 
 	it("submits search query", async () => {
 		vi.spyOn(wrapper.vm, "handleSearch");
-		await wrapper.find("#search-bar form").trigger("submit");
+		await wrapper.find("#search-bar").trigger("submit");
 		expect(wrapper.vm.handleSearch).toBeCalled();
 	});
 
