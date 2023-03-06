@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import AppHeader from "../index.vue";
 describe("Testing Header Component", () => {
@@ -20,5 +20,20 @@ describe("Testing Header Component", () => {
 		expect(wrapper.find("#favorites-button").exists()).toBeTruthy();
 	});
 
+	it("extends searchbar width on focus", async () => {
+		expect(wrapper.find("#search-bar input").classes()).not.toContain("pr-24");
+		await wrapper.find("#search-bar input").trigger("focus");
+		expect(wrapper.find("#search-bar input").classes()).toContain("pr-24");
+	});
 
+	it("submits search query", async () => {
+		vi.spyOn(wrapper.vm, "handleSearch");
+		await wrapper.find("#search-bar form").trigger("submit");
+		expect(wrapper.vm.handleSearch).toBeCalled();
+	});
+
+	it("updates input value on type", async () => {
+		await wrapper.find("#search-bar input").setValue("test");
+		expect(wrapper.vm.searchQuery).toBe("test");
+	});
 });
