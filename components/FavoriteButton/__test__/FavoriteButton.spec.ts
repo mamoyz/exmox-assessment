@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import FavoriteButton from "../index.vue";
-
+import mockAnimes from "../../../mocks/mockAnimes.json";
 describe("Testing FavoriteButton Component", () => {
 	let activeWrapper: any = null;
 	let dectiveWrapper: any = null;
@@ -10,13 +10,13 @@ describe("Testing FavoriteButton Component", () => {
 		activeWrapper = shallowMount(FavoriteButton, {
 			props: {
 				active: true,
-				id: "1",
+				anime: mockAnimes[0],
 			},
 		});
 		dectiveWrapper = shallowMount(FavoriteButton, {
 			props: {
 				active: false,
-				id: "1",
+				anime: mockAnimes[0],
 			},
 		});
 	});

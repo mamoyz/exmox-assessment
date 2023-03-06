@@ -13,7 +13,7 @@ describe("Testing Watchlist Page", () => {
 	let wrapper: any = null;
 	beforeEach(() => {
 		wrapper = shallowMount(MyWatchListPage);
-		wrapper.vm.animesInList = mockAnime;
+		wrapper.vm.watchList = mockAnime;
 	});
 
 	it("renders the component", () => {
@@ -24,6 +24,7 @@ describe("Testing Watchlist Page", () => {
 		expect(wrapper.find(".title").exists()).toBeTruthy();
 		expect(wrapper.find(".title").text()).toBe("My Watchlist");
 	});
+
 	it("renders animes in watchlist", () => {
 		expect(wrapper.findAllComponents({ name: "AnimeListItem" }).length).toBe(5);
 	});
