@@ -8,6 +8,7 @@
 <script>
 	import { useAnimeStore } from "~/stores/animes";
 	export default {
+		name: "FavoriteButton",
 		props: {
 			active: {
 				type: Boolean,

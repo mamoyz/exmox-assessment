@@ -3,17 +3,22 @@ import { shallowMount } from "@vue/test-utils";
 import FavoriteButton from "../index.vue";
 
 describe("Testing FavoriteButton Component", () => {
-	const activeWrapper = shallowMount(FavoriteButton, {
-		props: {
-			active: true,
-			id: "1",
-		},
-	});
-	const dectiveWrapper = shallowMount(FavoriteButton, {
-		props: {
-			active: false,
-			id: "1",
-		},
+	let activeWrapper: any = null;
+	let dectiveWrapper: any = null;
+
+	beforeEach(() => {
+		activeWrapper = shallowMount(FavoriteButton, {
+			props: {
+				active: true,
+				id: "1",
+			},
+		});
+		dectiveWrapper = shallowMount(FavoriteButton, {
+			props: {
+				active: false,
+				id: "1",
+			},
+		});
 	});
 
 	it("renders the component", () => {
@@ -28,16 +33,16 @@ describe("Testing FavoriteButton Component", () => {
 	});
 
 	it("adds anime to watchlist", async () => {
+		expect(activeWrapper.classes()).toContain("active");
 		vi.spyOn(dectiveWrapper.vm, "handleClick");
 		await dectiveWrapper.find(".favorite-button").trigger("click");
 		expect(dectiveWrapper.vm.handleClick).toBeCalled();
-		expect(dectiveWrapper.classes()).toContain("active");
 	});
 
 	it("remove anime from watchlist", async () => {
+		expect(dectiveWrapper.classes()).not.toContain("active");
 		vi.spyOn(activeWrapper.vm, "handleClick");
 		await activeWrapper.find(".favorite-button").trigger("click");
 		expect(activeWrapper.vm.handleClick).toBeCalled();
-		expect(activeWrapper.classes()).not.toContain("active");
 	});
 });
