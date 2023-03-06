@@ -1,3 +1,5 @@
+import gql from 'graphql-tag';
+
 import { media } from "../fragments/media";
 export const homeAnimes = gql`
 	query {

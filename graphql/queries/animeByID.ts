@@ -1,3 +1,4 @@
+import gql from 'graphql-tag';
 import { media } from "../fragments/media";
 export const animeByID = gql`
 	query media($id: Int) {

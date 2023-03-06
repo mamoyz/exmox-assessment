@@ -1,3 +1,4 @@
+import gql from 'graphql-tag';
 import { mediaObject } from "../fragments/media";
 export const searchAnimes = gql`
 	query ($page: Int = 1, $search: String) {

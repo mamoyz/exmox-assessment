@@ -6,8 +6,8 @@
 </template>
 
 <script>
-	import HomeHero from "@/components/HomeHero";
-	import HomeAnimes from "@/components/HomeAnimes";
+	import HomeHero from "@/components/HomeHero/index.vue";
+	import HomeAnimes from "@/components/HomeAnimes/index.vue";
 	export default {
 		components: {
 			HomeHero,
