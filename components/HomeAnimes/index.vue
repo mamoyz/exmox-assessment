@@ -10,8 +10,18 @@
 		components: {
 			AnimeSlider,
 		},
-		setup() {
-			return {};
+		props: {
+			animes: {
+				type: Object,
+			},
+		},
+
+		setup(props) {
+			const { trending, top } = toRefs(props.animes);
+			return {
+				trending,
+				top,
+			};
 		},
 	};
 </script>

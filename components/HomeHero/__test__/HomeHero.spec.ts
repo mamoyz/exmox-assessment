@@ -7,7 +7,9 @@ describe("Testing HomeHero Component", () => {
 		wrapper = shallowMount(HomeHero, {
 			props: {
 				featuredAnime: {
-					title: "Test Title",
+					title: {
+						english: "Test Title",
+					},
 					description: "Test Description",
 					bannerImage: "https://via.placeholder.com/150",
 					id: "12345",

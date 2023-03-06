@@ -1,9 +1,14 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import HomePage from "../index.vue";
-// import mockAnimes from "../../mocks/mockAnimes.json";
 
 describe("Testing HomePage Component", () => {
+	vi.mock("#imports", () => {
+		return {
+			useAsyncData() {},
+		};
+	});
+
 	let wrapper: any = null;
 	beforeEach(() => {
 		wrapper = shallowMount(HomePage);
