@@ -10,7 +10,7 @@
 				id="hero-button"
 				target="_blank"
 				:to="{
-					path: slug,
+					path: animeSlug,
 				}"
 			>
 				More Info
@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-	import kebabCase from "lodash/kebabCase";
+	import { slug } from "~/utils/slug";
 	export default {
 		name: "HomeHero",
 		props: {
@@ -31,8 +31,8 @@
 		},
 		setup(props) {
 			const { bannerImage, title, description, id } = toRefs(props.featuredAnime);
-			const slug = computed(() => `/anime/${kebabCase(title?.value?.english)}/${id?.value}/`);
-			return { bannerImage, title, description, id, slug };
+			const animeSlug = computed(() => slug(title?.value?.english, id?.value));
+			return { bannerImage, title, description, animeSlug };
 		},
 	};
 </script>

@@ -17,7 +17,7 @@ describe("Testing AnimeListItem Component", () => {
 
 	it("renders anime link", () => {
 		expect(wrapper.find(".anime-link").exists()).toBeTruthy();
-		expect(wrapper.find(".anime-link").attributes("href")).toBe("/anime/blue-lock/137822");
+		expect(wrapper.find(".anime-link").attributes("to")).toBe("/anime/blue-lock/137822/");
 	});
 
 	it("renders anime title", () => {

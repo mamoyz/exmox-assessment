@@ -1,10 +1,9 @@
 <template>
-	<div class="text-white">
+	<nuxt-link :to="animeSlug" class="text-white anime-link">
 		<div class="img">
 			<nuxt-img class="image rounded-2xl" :src="image" />
 		</div>
 		<h4 class="title">{{ title }}</h4>
-		<p class="description">{{ description }}</p>
 		<p class="score">{{ averageScore }}</p>
 		<p class="genres">
 			{{ genres }}
@@ -12,10 +11,11 @@
 		<p class="status">
 			{{ nextAiring }}
 		</p>
-	</div>
+	</nuxt-link>
 </template>
 
 <script>
+	import { slug } from "~/utils/slug";
 	export default {
 		name: "AnimeListItem",
 		props: {
@@ -34,6 +34,7 @@
 			const nextAiring = computed(() => {
 				return anime.nextAiringEpisode ? anime.nextAiringEpisode.airingAt : "Not Airing";
 			});
+			const animeSlug = ref(slug(title, anime.id));
 			return {
 				image,
 				title,
@@ -41,6 +42,7 @@
 				averageScore,
 				genres,
 				nextAiring,
+				animeSlug,
 			};
 		},
 	};
