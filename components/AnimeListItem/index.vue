@@ -7,7 +7,7 @@
 		</nuxt-link>
 
 		<h4 class="title font-semibold text-lg mt-5">{{ title }}</h4>
-		<p class="flex  text-base text-gray-300 mt-1">
+		<p class="flex text-base text-gray-300 mt-1">
 			Average Score
 			<span class="score bg-indigo-600 rounded-full px-5 py-1 text-sm ml-2 font-bold">
 				{{ averageScore }}
@@ -28,6 +28,7 @@
 
 <script>
 	import { slug } from "~/utils/slug";
+	import { airing } from "~/utils/airing";
 	import FavoriteButton from "~/components/FavoriteButton/index.vue";
 	import { useAnimeStore } from "~/stores/animes";
 	export default {
@@ -50,10 +51,7 @@
 			const averageScore = anime.averageScore;
 			const genres = anime.genres.join(", ");
 			const nextAiring = computed(() => {
-				const airingAt = (date) => {
-					return "Airing at " + new Date(date * 1000).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-				};
-				return anime.nextAiringEpisode ? airingAt(anime.nextAiringEpisode.airingAt) : "Not Airing";
+				return airing(anime);
 			});
 			const animeSlug = ref(slug(title, anime.id));
 			const { state } = useAnimeStore();
