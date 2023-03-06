@@ -17,7 +17,6 @@
 		props: {
 			featuredAnime: {
 				type: Object,
-				required: true,
 			},
 		},
 		setup(props) {

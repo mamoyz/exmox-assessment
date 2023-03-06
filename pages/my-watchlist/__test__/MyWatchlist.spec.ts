@@ -25,6 +25,12 @@ describe("Testing Watchlist Page", () => {
 		expect(wrapper.find(".title").text()).toBe("My Watchlist");
 	});
 
+	it("renders not found message", () => {
+		wrapper.vm.watchList = [];
+		expect(wrapper.find(".not-found").exists()).toBeTruthy();
+		expect(wrapper.find(".not-found").text()).toBe("No animes found in your watchlist");
+	});
+
 	it("renders animes in watchlist", () => {
 		expect(wrapper.findAllComponents({ name: "AnimeListItem" }).length).toBe(5);
 	});
