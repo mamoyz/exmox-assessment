@@ -46,7 +46,4 @@ export default defineNuxtConfig({
 			"2xl": 1536,
 		},
 	},
-	runtimeConfig: {
-		public: {},
-	},
 });

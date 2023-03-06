@@ -56,7 +56,7 @@
 			const animeSlug = ref(slug(title, anime.id));
 			const { state } = useAnimeStore();
 			const inWatchList = computed(() => {
-				return state.watchList.find((anime) => anime.id === id);
+				return state.watchList.some((anime) => anime.id === id);
 			});
 			return {
 				id,

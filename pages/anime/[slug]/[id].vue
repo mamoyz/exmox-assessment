@@ -27,7 +27,7 @@
 						<FavoriteButton :active="inWatchList" :anime="animeInfo" />
 					</div>
 					<div class="genres text-gray-300 text-lg mt-6">
-						<span class="text-xs uppercase text-white bg-indigo-700 rounded-full mr-3 py-2 px-5" v-for="genre in animeInfo?.genres" :key="genre">
+						<span class="text-xs uppercase text-white bg-indigo-700 rounded-full mr-3 py-2 px-5 inline-block mt-3" v-for="genre in animeInfo?.genres" :key="genre">
 							{{ genre }}
 						</span>
 					</div>
