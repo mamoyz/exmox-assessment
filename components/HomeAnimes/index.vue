@@ -1,6 +1,6 @@
 <template>
-	<AnimeSlider />
-	<AnimeSlider />
+	<AnimeSlider title="Trending Animes" :animes="animes.trending?.media" />
+	<AnimeSlider title="Top Animes" :animes="animes.top?.media" />
 </template>
 
 <script>
@@ -13,6 +13,10 @@
 		props: {
 			animes: {
 				type: Object,
+				default: {
+					trending: [],
+					top: [],
+				},
 			},
 		},
 

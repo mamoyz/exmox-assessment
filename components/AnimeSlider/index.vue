@@ -3,13 +3,14 @@
 		<h2 class="title">{{ title }}</h2>
 		<button class="prev"></button>
 		<button class="next"></button>
-		<AnimeListItem :key="item.id" v-for="item in animes" />
+		<AnimeListItem :key="item.id" v-for="item in animes" :anime="item" />
 	</div>
 </template>
 
 <script>
 	import AnimeListItem from "~/components/AnimeListItem/index.vue";
 	export default {
+		name: "AnimeSlider",
 		components: {
 			AnimeListItem,
 		},
