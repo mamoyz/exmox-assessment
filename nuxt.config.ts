@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
-	modules: ["@pinia/nuxt", "@nuxtjs/apollo", "@nuxt/image-edge"],
+	modules: ["@pinia/nuxt", "@nuxtjs/apollo", "@nuxt/image-edge", "@pinia-plugin-persistedstate/nuxt"],
 	pinia: {
 		autoImports: [
 			// automatically imports `defineStore`
@@ -23,6 +23,9 @@ export default defineNuxtConfig({
 			// automatically imports `defineStore` as `definePiniaStore`
 			["defineStore", "definePiniaStore"], // import { defineStore as definePiniaStore } from 'pinia'
 		],
+	},
+	piniaPersistedstate: {
+		storage: "localStorage",
 	},
 	apollo: {
 		autoImports: true,

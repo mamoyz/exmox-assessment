@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27954023.4cee565",
     "@nuxtjs/apollo": "^5.0.0-alpha.5",
+    "@pinia-plugin-persistedstate/nuxt": "^1.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/test-utils": "^2.3.0",
     "autoprefixer": "^10.4.13",
