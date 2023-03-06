@@ -6,6 +6,7 @@
 <script>
 	import AnimeSlider from "~/components/AnimeSlider/index.vue";
 	export default {
+		name: "HomeAnimes",
 		components: {
 			AnimeSlider,
 		},

@@ -3,6 +3,7 @@ setActivePinia(createPinia());
 import { homeAnimes } from "~/graphql/queries/homeAnimes";
 import { animeByID } from "~/graphql/queries/animeByID";
 import { searchAnimes } from "~/graphql/queries/searchAnimes";
+
 export const useAnimeStore = defineStore("useAnimeStore", () => {
 	type Filters = {
 		page: number;

@@ -9,6 +9,7 @@
 
 <script lang="ts">
 	export default {
+		name: "HomeHero",
 		props: {
 			featuredAnime: {
 				type: Object,
