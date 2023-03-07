@@ -20,7 +20,7 @@ pnpm install
 ## Testing
 
 ```bash
-npm run dev
+npm run test
 ```
 
 
